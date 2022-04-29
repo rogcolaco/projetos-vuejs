@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue@3"></script>
+
+<div id="app">
+  <input type="text" v-on:input="alterartitulo">
+    <p>{{ titulo }}</p>
+</div>
+
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        titulo: 'Usando VueJS!'
+      }
+    },
+    methods: {
+      alterartitulo(event) {
+        this.titulo = event.target.value
+      }
+    }
+  }).mount('#app')
+</script>
