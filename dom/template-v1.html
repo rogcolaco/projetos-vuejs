@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue@3"></script>
+
+<div id="app">
+    <p>{{ titulo }}</p>
+    <p>{{ saudacao() }}</p>
+</div>
+
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        titulo: 'Usando VueJS!'
+      }
+    },
+    methods: {
+      saudacao() {
+        return 'Boa Semana'
+      }
+    }
+  }).mount('#app')
+</script>

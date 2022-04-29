@@ -1,0 +1,23 @@
+<script src="https://unpkg.com/vue@3"></script>
+
+<div id="app">
+    <p>{{ titulo }}</p>
+    <p>{{ saudacao() }}</p>
+    <a v-bind:href="link">Google</a>
+</div>
+
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        titulo: 'Usando VueJS!',
+        link:'http://www.google.com.br'
+      }
+    },
+    methods: {
+      saudacao() {
+        return this.titulo
+      }
+    }
+  }).mount('#app')
+</script>
